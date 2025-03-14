@@ -1,49 +1,55 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Globe, Droplets } from 'lucide-react';
-import Logo from '../Logo';
+import { Phone, Globe, Droplets } from 'lucide-react';
 import { contactInfo } from '../../utils/contactInfo';
 
 const BusinessCard = () => {
   return (
-    <div className="w-[85.6mm] h-[54mm] bg-white rounded-lg shadow-lg p-6 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
-        <Droplets className="w-full h-full text-blue-600" />
-      </div>
+    <div className="w-[85.6mm] h-[54mm] bg-blue-600 rounded-lg shadow-xl p-5 relative overflow-hidden">
+      <div className="h-full flex flex-col">
+        {/* Section supérieure */}
+        <div className="flex justify-between relative">
+          {/* Logo et nom à gauche */}
+          <div className="flex flex-col items-start">
+            <Droplets className="w-8 h-8 text-white mb-1" />
+            <h1 className="text-lg font-bold text-white">
+              OC'Clean
+            </h1>
+            <p className="text-[10px] font-medium text-blue-100">
+              PROPRETÉ & EXCELLENCE
+            </p>
+          </div>
 
-      {/* Logo */}
-      <div className="mb-4">
-        <Logo />
-      </div>
+          {/* Ligne séparatrice verticale */}
+          <div className="absolute left-[45%] top-0 h-full border-l-2 border-blue-300" />
 
-      {/* Contact Info */}
-      <div className="space-y-2">
-        <div className="flex items-center space-x-2">
-          <Phone className="w-4 h-4 text-blue-600" />
-          <span className="text-sm">{contactInfo.phone}</span>
+          {/* Contact à droite */}
+          <div className="text-right space-y-1">
+            <div className="flex items-center justify-end space-x-1.5 text-white">
+              <Phone className="w-3.5 h-3.5 text-white" />
+              <span className="text-xs">{contactInfo.phone}</span>
+            </div>
+            <div className="flex items-center justify-end space-x-1.5 text-white">
+              <Globe className="w-3.5 h-3.5 text-white" />
+              <span className="text-xs">oc-clean.onrender.com</span>
+            </div>
+            <div className="text-xs text-white">
+              Montpellier et environs
+            </div>
+          </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <Mail className="w-4 h-4 text-blue-600" />
-          <span className="text-sm">{contactInfo.email}</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <Globe className="w-4 h-4 text-blue-600" />
-          <span className="text-sm">www.occlean.fr</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <MapPin className="w-4 h-4 text-blue-600" />
-          <span className="text-sm">{contactInfo.address}</span>
-        </div>
-      </div>
 
-      {/* Services */}
-      <div className="absolute bottom-4 right-4 text-right">
-        <p className="text-xs text-gray-500">
-          • Nettoyage Auto
-          • Nettoyage Vitres
-          • Entretien Bureaux
-          • Entretien Immeubles
-        </p>
+        {/* Ligne séparatrice horizontale */}
+        <div className="my-3 border-t-2 border-blue-300" />
+
+        {/* Services en bas */}
+        <div className="mt-auto">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-0.5 text-xs text-white">
+            <div className="flex items-center">• Nettoyage Auto</div>
+            <div className="flex items-center">• Nettoyage Vitres</div>
+            <div className="flex items-center">• Locaux Commerciaux</div>
+            <div className="flex items-center">• Nettoyage Textile</div>
+          </div>
+        </div>
       </div>
     </div>
   );

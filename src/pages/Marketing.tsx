@@ -1,7 +1,9 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Globe } from 'lucide-react';
-import Logo from '../components/Logo';
+import Logo from '../components/common/Logo';
 import PrintableFlyer from '../components/marketing/PrintableFlyer';
+import CarSticker from '../components/marketing/CarSticker';
+import FlyerExport from '../components/marketing/FlyerExport';
 
 const Marketing = () => {
   return (
@@ -69,7 +71,7 @@ const Marketing = () => {
         </section>
 
         {/* Flyer */}
-        <section>
+        <section className="mb-16">
           <h2 className="text-2xl font-bold mb-8">Flyer Commercial</h2>
           <div className="bg-white rounded-xl shadow-xl overflow-hidden p-8">
             <div className="mb-8 text-gray-600">
@@ -90,6 +92,37 @@ const Marketing = () => {
             {/* Flyer Preview */}
             <div className="flex justify-center">
               <PrintableFlyer />
+            </div>
+            
+            {/* Export Options */}
+            <div className="mt-8 max-w-md mx-auto">
+              <FlyerExport />
+            </div>
+          </div>
+        </section>
+
+        {/* Sticker Voiture */}
+        <section>
+          <h2 className="text-2xl font-bold mb-8">Sticker Voiture</h2>
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden p-8">
+            <div className="mb-8 text-gray-600">
+              <p className="mb-4">
+                Sticker professionnel conçu pour la vitre arrière de votre Renault Captur 2019.
+              </p>
+              <p>
+                Caractéristiques du design :
+              </p>
+              <ul className="list-disc ml-6 mt-2">
+                <li>Design moderne et épuré</li>
+                <li>Excellente visibilité des informations</li>
+                <li>Matériaux résistants aux intempéries</li>
+                <li>Installation facile</li>
+              </ul>
+            </div>
+            
+            {/* Sticker Preview */}
+            <div className="flex justify-center bg-gray-100 p-8 rounded-lg">
+              <CarSticker />
             </div>
           </div>
         </section>

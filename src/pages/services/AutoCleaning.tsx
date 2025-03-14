@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Star, MapPin } from 'lucide-react';
 import ServiceGallery from '../../components/services/ServiceGallery';
+import ScrollToContact from '../../components/common/ScrollToContact';
 
 const AutoCleaning: React.FC = () => {
   const gallery = [
@@ -32,7 +33,10 @@ const AutoCleaning: React.FC = () => {
         <div className="relative h-full flex items-center justify-center text-center">
           <div className="max-w-4xl px-4">
             <h1 className="text-4xl font-bold text-white mb-4">Nettoyage Auto à Montpellier</h1>
-            <p className="text-xl text-white">Service professionnel de nettoyage automobile à domicile</p>
+            <p className="text-xl text-white mb-8">Service professionnel de nettoyage automobile à domicile</p>
+            <ScrollToContact className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+              Obtenir un devis
+            </ScrollToContact>
           </div>
         </div>
       </div>

@@ -15,10 +15,10 @@ const UpholsteryCleaning = () => {
         "Protection anti-taches"
       ],
       images: [
-        "https://i.ibb.co/XkkpgP3/canape1.jpg",
-        "https://i.ibb.co/L8h8zfz/canape2.jpg",
-        "https://i.ibb.co/w4BLqKx/canape3.jpg",
-        "https://i.ibb.co/D8fHpFg/canape4.jpg"
+        "https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1512212621149-107ffe572d2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
       ]
     },
     {
@@ -32,7 +32,7 @@ const UpholsteryCleaning = () => {
         "Séchage rapide"
       ],
       images: [
-        "https://i.ibb.co/d5SgZtm/tapis.jpg"
+        "https://images.unsplash.com/photo-1600166898405-da9535204843?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
       ]
     },
     {
@@ -46,7 +46,7 @@ const UpholsteryCleaning = () => {
         "Désodorisation naturelle"
       ],
       images: [
-        "https://i.ibb.co/HKLV4Tg/matelas.jpg"
+        "https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
       ]
     }
   ];

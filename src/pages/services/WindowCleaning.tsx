@@ -5,17 +5,17 @@ import ServiceGallery from '../../components/services/ServiceGallery';
 const WindowCleaning: React.FC = () => {
   const gallery = [
     {
-      image: "https://i.ibb.co/xMkWmqR/vitres1.jpg",
+      image: "https://images.unsplash.com/photo-1622015663084-307d19eabbbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       caption: "Nettoyage façade vitrée",
       description: "Nettoyage professionnel de façade avec système de perche à eau pure"
     },
     {
-      image: "https://i.ibb.co/HB1wWLY/vitres2.jpg",
+      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       caption: "Nettoyage véranda",
       description: "Traitement complet intérieur et extérieur avec produits anti-traces"
     },
     {
-      image: "https://i.ibb.co/MZMkb0m/vitres3.jpg",
+      image: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       caption: "Résultat impeccable",
       description: "Finition parfaite grâce à nos techniques professionnelles"
     }

@@ -17,7 +17,7 @@ const Hero = () => {
           </h1>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             OC'Clean, votre partenaire de confiance pour tous vos besoins en nettoyage. 
-            De l'entretien de bureaux au nettoyage automobile, nous garantissons un service 
+            De l'entretien de bureaux au nettoyage de piscines, nous garantissons un service 
             d'excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -41,7 +41,7 @@ const Hero = () => {
               { value: "15min", label: "Temps de réponse" },
               { value: "24/24", label: "Service client" }
             ].map((stat, index) => (
-              <div key={index} className="text-white">
+              <div key={index} className="text-white backdrop-blur-sm bg-white/10 rounded-lg p-4">
                 <div className="text-3xl font-bold mb-1">{stat.value}</div>
                 <div className="text-sm opacity-80">{stat.label}</div>
               </div>

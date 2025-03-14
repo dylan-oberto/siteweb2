@@ -19,21 +19,9 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-blue-600">Accueil</Link>
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-blue-600">Services</button>
-              <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                {serviceLinks.map((service) => (
-                  <Link
-                    key={service.path}
-                    to={service.path}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50"
-                  >
-                    {service.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600">À Propos</Link>
+            <Link to="/particuliers" className="text-gray-700 hover:text-blue-600">Particuliers</Link>
+            <Link to="/professionnels" className="text-gray-700 hover:text-blue-600">Professionnels</Link>
+            <Link to="/airbnb" className="text-gray-700 hover:text-blue-600">AirBnB</Link>
             <a href="#contact" className="text-gray-700 hover:text-blue-600">Contact</a>
           </div>
 
@@ -58,22 +46,26 @@ const Navbar = () => {
               >
                 Accueil
               </Link>
-              {serviceLinks.map((service) => (
-                <Link
-                  key={service.path}
-                  to={service.path}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {service.name}
-                </Link>
-              ))}
               <Link
-                to="/about"
+                to="/particuliers"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsOpen(false)}
               >
-                À Propos
+                Particuliers
+              </Link>
+              <Link
+                to="/professionnels"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Professionnels
+              </Link>
+              <Link
+                to="/airbnb"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                AirBnB
               </Link>
               <a
                 href="#contact"

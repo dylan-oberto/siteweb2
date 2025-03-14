@@ -1,123 +1,171 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Shield, Star, Clock, Award } from 'lucide-react';
-import Logo from '../Logo';
-import ServiceCard from './ServiceCard';
-import EngagementCard from './EngagementCard';
+import { Phone, Mail, MapPin, Shield, CheckCircle, Droplets, Sparkles } from 'lucide-react';
 import { contactInfo } from '../../utils/contactInfo';
 
 const PrintableFlyer = () => {
-  const services = [
-    {
-      title: "Nettoyage Auto",
-      image: "https://images.unsplash.com/photo-1552930294-6b595f4c2974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: ["Intérieur & Extérieur", "Protection céramique", "Traitement cuir"]
-    },
-    {
-      title: "Nettoyage Vitres",
-      image: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: ["Particuliers & Pro", "Grandes hauteurs", "Anti-traces"]
-    },
-    {
-      title: "Entretien Bureaux",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: ["Nettoyage quotidien", "Désinfection", "Espaces communs"]
-    },
-    {
-      title: "Entretien Immeubles",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: ["Parties communes", "Sortie poubelles", "Vitrerie"]
-    }
-  ];
-
-  const engagements = [
-    { icon: Shield, text: "Satisfaction garantie" },
-    { icon: Clock, text: "Disponible 7j/7" },
-    { icon: Award, text: "Personnel qualifié" }
-  ];
-
   return (
-    <div className="w-[148mm] h-[210mm] bg-white mx-auto shadow-xl relative overflow-hidden">
-      {/* En-tête avec effet parallaxe */}
-      <div className="relative h-[70mm] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/90 to-blue-800/90" />
-        <div className="relative h-full flex flex-col items-center justify-center text-white p-8">
-          <div className="transform hover:scale-105 transition-transform duration-300">
-            <Logo />
+    <div className="w-[151mm] h-[213mm] bg-white mx-auto shadow-xl relative overflow-hidden">
+      {/* En-tête */}
+      <div className="h-[55mm] bg-blue-600 relative">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1622015663084-307d19eabbbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] opacity-20 bg-cover bg-center" />
+        <div className="relative h-full flex justify-between items-center px-4">
+          {/* Logo CESU à gauche */}
+          <div className="bg-white p-2 rounded-lg">
+            <img 
+              src="https://i.ibb.co/gLJQtKB/cesu-logo.png"
+              alt="Logo CESU"
+              className="h-16 object-contain"
+            />
           </div>
-          <h1 className="text-3xl font-bold text-center mt-4 mb-2">
-            Expert du Nettoyage Professionnel
-          </h1>
-          <p className="text-center text-lg">
-            Votre partenaire propreté à Montpellier
-          </p>
+          
+          {/* Logo OC'Clean au centre */}
+          <div className="flex items-center">
+            <div className="flex items-center space-x-2">
+              <div className="relative">
+                <div className="relative">
+                  <Droplets className="w-12 h-12 text-white" />
+                  <Sparkles className="absolute -top-2 -right-2 w-6 h-6 text-green-400" />
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <div className="flex items-baseline">
+                  <span className="text-3xl font-extrabold tracking-tight text-white">
+                    OC'Clean
+                  </span>
+                </div>
+                <span className="text-xs font-medium text-blue-100 tracking-wider">
+                  PROPRETÉ & EXCELLENCE
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Logo SAP à droite */}
+          <div className="bg-white p-2 rounded-lg">
+            <img 
+              src="https://i.ibb.co/0pNgq1t/sap-logo.png"
+              alt="Logo Services à la Personne"
+              className="h-16 object-contain"
+            />
+          </div>
         </div>
       </div>
 
-      {/* Services avec images */}
-      <div className="grid grid-cols-2 gap-3 p-4">
-        {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
-      </div>
-
-      {/* Nos engagements avec effets */}
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-center mb-4 text-blue-800">
-          Nos Engagements
-        </h2>
-        <div className="grid grid-cols-3 gap-3">
-          {engagements.map((engagement, index) => (
-            <EngagementCard key={index} {...engagement} />
+      {/* Services */}
+      <div className="px-4 py-2">
+        <h2 className="text-lg font-bold text-center mb-2">Nos Services</h2>
+        <div className="grid grid-cols-3 gap-2">
+          {[
+            {
+              title: "Nettoyage Auto",
+              image: "https://images.unsplash.com/photo-1552930294-6b595f4c2974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+              features: ["Intérieur & Extérieur", "Protection céramique"]
+            },
+            {
+              title: "Nettoyage Vitres",
+              image: "https://i.ibb.co/bjyKbfmP/nettoyage-vitre.jpg",
+              features: ["Particuliers & Pro", "Grandes hauteurs"]
+            },
+            {
+              title: "Entretien Bureaux",
+              image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+              features: ["Nettoyage quotidien", "Désinfection"]
+            },
+            {
+              title: "Entretien Immeubles",
+              image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+              features: ["Parties communes", "Vitrerie"]
+            },
+            {
+              title: "Nettoyage Textile",
+              image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+              features: ["Canapés & Tapis", "Matelas"]
+            },
+            {
+              title: "Nettoyage Piscines",
+              image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+              features: ["Entretien régulier", "Traitement eau"]
+            }
+          ].map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-16 relative">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                <h3 className="absolute bottom-1 left-2 text-xs font-bold text-white">
+                  {service.title}
+                </h3>
+              </div>
+              <div className="p-1">
+                <ul className="space-y-0.5">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-[9px]">
+                      <CheckCircle className="w-2 h-2 text-blue-600 mr-1 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* Offre spéciale avec effet brillant */}
-      <div className="p-4">
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg p-6 text-white">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjQwIiB5Mj0iNDAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')] opacity-50" />
-          <div className="relative">
-            <h2 className="text-2xl font-bold text-center mb-2">
-              OFFRE SPÉCIALE
-            </h2>
-            <p className="text-3xl font-bold text-center mb-2">
-              -20%
-            </p>
-            <p className="text-center">
-              sur votre première prestation
-            </p>
+      {/* Garanties */}
+      <div className="px-4 py-2 bg-gray-50">
+        <h2 className="text-lg font-bold text-center mb-2">Nos Garanties</h2>
+        <div className="grid grid-cols-3 gap-2">
+          {[
+            { text: "Devis Gratuit", icon: Shield },
+            { text: "Personnel Qualifié", icon: Shield },
+            { text: "Satisfaction Garantie", icon: Shield }
+          ].map((item, index) => (
+            <div key={index} className="flex items-center justify-center space-x-1.5 bg-white p-2 rounded-lg shadow-sm">
+              <item.icon className="w-4 h-4 text-blue-600" />
+              <span className="font-medium text-xs">{item.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Contact */}
+      <div className="px-4 py-2">
+        <h2 className="text-lg font-bold text-center mb-2">Contactez-nous</h2>
+        <div className="grid grid-cols-3 gap-2">
+          <div className="flex items-center justify-center space-x-1.5 bg-blue-50 p-2 rounded-lg">
+            <Phone className="w-4 h-4 text-blue-600" />
+            <span className="font-medium text-xs">{contactInfo.phone}</span>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-blue-50 p-2 rounded-lg">
+            <div className="flex items-center space-x-1.5">
+              <Mail className="w-4 h-4 text-blue-600" />
+              <span className="font-medium text-xs">Email</span>
+            </div>
+            <span className="text-[8px] text-center break-all">{contactInfo.email}</span>
+          </div>
+          <div className="flex items-center justify-center space-x-1.5 bg-blue-50 p-2 rounded-lg">
+            <MapPin className="w-4 h-4 text-blue-600" />
+            <span className="font-medium text-xs">{contactInfo.address}</span>
           </div>
         </div>
       </div>
 
-      {/* Contact avec effet de carte */}
-      <div className="bg-gray-50 p-4">
-        <div className="bg-white rounded-lg shadow-lg p-4">
-          <h2 className="text-xl font-bold text-center mb-4 text-blue-800">Contactez-nous</h2>
-          <div className="space-y-3">
-            {[
-              { icon: Phone, text: contactInfo.phone },
-              { icon: Mail, text: contactInfo.email },
-              { icon: MapPin, text: contactInfo.address }
-            ].map((item, index) => (
-              <div key={index} className="flex items-center justify-center space-x-2">
-                <item.icon className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700">{item.text}</span>
-              </div>
-            ))}
-          </div>
+      {/* Offre Spéciale - Remplace les certifications */}
+      <div className="px-4 py-3">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg py-3 px-4 text-white text-center shadow-lg mx-auto border-2 border-blue-300">
+          <h2 className="text-2xl font-bold mb-1">OFFRE SPÉCIALE -20%</h2>
+          <p className="text-sm">Sur votre première prestation • Sur présentation de ce flyer</p>
         </div>
       </div>
 
-      {/* Pied de page */}
-      <div className="absolute bottom-0 left-0 right-0 p-2 bg-gray-100 text-center text-xs text-gray-600">
-        Ne pas jeter sur la voie publique • SIRET: XXXXXXXXXXXXX
+      {/* Footer avec SIRET mis à jour */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gray-900 text-white py-1.5 px-4">
+        <div className="text-center text-[9px]">
+          Entreprise agréée Services à la Personne • SIRET: 93961336000014
+        </div>
       </div>
     </div>
   );
